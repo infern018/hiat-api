@@ -40,15 +40,15 @@ router.get('/', async (req, res) => {
 // })
 
 // //get back a specific post
-// router.get('/:postId', async (req, res) => {
-//     try{
-//         const postID = await Post.findById(req.params.postId);
-//         res.json(postID);
-//     } catch(err) {
-//         res.json({message: err})
-//     }
+router.get('/:postId', async (req, res) => {
+    try{
+        const postID = await Post.findById(req.params.postId);
+        res.json(postID);
+    } catch(err) {
+        res.json({message: err})
+    }
     
-// })
+})
 
 // //delete post
 // router.delete('/:postId', async (req, res) => {
